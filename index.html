@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sendero de Olas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+        
+        .container {
+            position: relative;
+            max-width: 100%;
+            max-height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .background-image {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+        }
+        
+        .contact-icons {
+            position: absolute;
+            /* Posición ajustada más a la izquierda */
+            top: 74.5%;
+            right: 40%;  /* Cambiado de 22% a 28% (más a la izquierda) */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            z-index: 10;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;  /* Más grande */
+            height: 50px; /* Más grande */
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            font-size: 24px; /* Más grande */
+            color: white;
+            /* Colores originales por defecto */
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Colores originales siempre visibles */
+        .whatsapp {
+            background-color: #25D366;
+        }
+        
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+        
+        .gmail {
+            background-color: #EA4335;
+        }
+        
+        .contact-link:hover {
+            transform: scale(1.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            animation: floatHover 1s ease-in-out infinite;
+        }
+        
+        /* Animación flotante */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes floatHover {
+            0% {
+                transform: scale(1.2) translateY(0px);
+            }
+            50% {
+                transform: scale(1.2) translateY(-5px);
+            }
+            100% {
+                transform: scale(1.2) translateY(0px);
+            }
+        }
+        
+        /* Retrasos diferentes para cada icono */
+        .whatsapp {
+            animation-delay: 0s;
+        }
+        
+        .instagram {
+            animation-delay: 0.5s;
+        }
+        
+        .gmail {
+            animation-delay: 1s;
+        }
+        
+        /* Ajustes responsivos */
+        @media (max-width: 1200px) {
+            .contact-icons {
+                top: 74%;
+                right: 26%;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .contact-icons {
+                top: 73.5%;
+                right: 24%;
+            }
+            
+            .contact-link {
+                width: 46px;
+                height: 46px;
+                font-size: 22px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-icons {
+                top: 73%;
+                right: 22%;
+                gap: 10px;
+            }
+            
+            .contact-link {
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+            }
+            
+            @keyframes float {
+                50% {
+                    transform: translateY(-6px);
+                }
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .contact-icons {
+                top: 72.5%;
+                right: 20%;
+                gap: 8px;
+            }
+            
+            .contact-link {
+                width: 38px;
+                height: 38px;
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .contact-icons {
+                top: 72%;
+                right: 18%;
+            }
+            
+            .contact-link {
+                width: 36px;
+                height: 36px;
+                font-size: 17px;
+            }
+        }
+        
+        /* Para pantallas muy grandes */
+        @media (min-width: 1600px) {
+            .contact-icons {
+                top: 75%;
+                right: 30%;
+            }
+            
+            .contact-link {
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="WhatsApp Image 2025-09-26 at 2.05.36 PM.jpeg" alt="Sendero de Olas - Un viaje lleno de sabor y tradición frente al mar" class="background-image">
+        
+        <div class="contact-icons">
+            <a href="https://wa.me/584160270335" target="_blank" class="contact-link whatsapp" title="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/valentinacarrera871" target="_blank" class="contact-link instagram" title="Seguir en Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:tinacarrera5125@gmail.com" class="contact-link gmail" title="Enviar correo electrónico">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const image = document.querySelector('.background-image');
+            const container = document.querySelector('.container');
+            const contactIcons = document.querySelector('.contact-icons');
+            
+            // Si la imagen no carga, usar una imagen de respaldo
+            image.onerror = function() {
+                this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWY3ZmEyIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIj5TZW5kZXJvIGRlIE9sYXM8L3RleHQ+PC9zdmc+';
+            };
+            
+            // Ajustar posición de los iconos para mantenerlos en el lugar correcto
+            function adjustIconsPosition() {
+                const img = image;
+                
+                if (img.naturalWidth && img.naturalHeight) {
+                    const scaleX = img.clientWidth / img.naturalWidth;
+                    const scaleY = img.clientHeight / img.naturalHeight;
+                    
+                    // Posición original basada en la imagen (ajustada más a la izquierda)
+                    const originalTop = 447; // 74.5% de 600px
+                    const originalRight = 224; // 28% de 800px (más a la izquierda)
+                    
+                    // Aplicar escala
+                    contactIcons.style.top = (originalTop * scaleY) + 'px';
+                    contactIcons.style.right = (originalRight * scaleX) + 'px';
+                }
+            }
+            
+            // Ajustar cuando la imagen se carga
+            image.onload = adjustIconsPosition;
+            
+            // También ajustar cuando cambia el tamaño de la ventana
+            window.addEventListener('resize', adjustIconsPosition);
+            
+            // Efecto especial al hacer clic
+            const links = document.querySelectorAll('.contact-link');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Efecto visual de clic
+                    this.style.animation = 'none';
+                    this.style.transform = 'scale(0.8)';
+                    
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1.1)';
+                    }, 150);
+                    
+                    // Redirigir después del efecto
+                    setTimeout(() => {
+                        if (this.classList.contains('gmail')) {
+                            window.location.href = this.href;
+                        } else {
+                            window.open(this.href, '_blank');
+                        }
+                        
+                        // Restaurar animación
+                        setTimeout(() => {
+                            this.style.animation = '';
+                        }, 100);
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
